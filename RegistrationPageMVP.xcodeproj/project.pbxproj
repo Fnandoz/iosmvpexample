@@ -15,6 +15,10 @@
 		39A8E04C22F4FA5200D2036A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39A8E04A22F4FA5200D2036A /* LaunchScreen.storyboard */; };
 		39A8E05722F4FA5200D2036A /* RegistrationPageMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8E05622F4FA5200D2036A /* RegistrationPageMVPTests.swift */; };
 		39A8E06222F4FA5200D2036A /* RegistrationPageMVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8E06122F4FA5200D2036A /* RegistrationPageMVPUITests.swift */; };
+		39A8E07022F4FC7800D2036A /* RegistrationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8E06F22F4FC7800D2036A /* RegistrationUnitTest.swift */; };
+		39A8E07222F5007700D2036A /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8E07122F5007700D2036A /* RegistrationPresenter.swift */; };
+		39A8E07622F503C800D2036A /* ViewController+RegistrationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8E07522F503C800D2036A /* ViewController+RegistrationDelegate.swift */; };
+		39A8E07D22F50BC500D2036A /* MockUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8E07C22F50BC500D2036A /* MockUIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		39A8E05D22F4FA5200D2036A /* RegistrationPageMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RegistrationPageMVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39A8E06122F4FA5200D2036A /* RegistrationPageMVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPageMVPUITests.swift; sourceTree = "<group>"; };
 		39A8E06322F4FA5200D2036A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39A8E06F22F4FC7800D2036A /* RegistrationUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUnitTest.swift; sourceTree = "<group>"; };
+		39A8E07122F5007700D2036A /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
+		39A8E07522F503C800D2036A /* ViewController+RegistrationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+RegistrationDelegate.swift"; sourceTree = "<group>"; };
+		39A8E07C22F50BC500D2036A /* MockUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +107,11 @@
 		39A8E03D22F4FA4F00D2036A /* RegistrationPageMVP */ = {
 			isa = PBXGroup;
 			children = (
-				39A8E03E22F4FA4F00D2036A /* AppDelegate.swift */,
-				39A8E04022F4FA4F00D2036A /* ViewController.swift */,
-				39A8E04222F4FA4F00D2036A /* Main.storyboard */,
-				39A8E04822F4FA5200D2036A /* Assets.xcassets */,
-				39A8E04A22F4FA5200D2036A /* LaunchScreen.storyboard */,
-				39A8E04D22F4FA5200D2036A /* Info.plist */,
-				39A8E04522F4FA4F00D2036A /* RegistrationPageMVP.xcdatamodeld */,
+				39A8E07B22F50BA300D2036A /* Controller */,
+				39A8E07922F50B8B00D2036A /* Presenter */,
+				39A8E07822F50B7E00D2036A /* View */,
+				39A8E07E22F50C0C00D2036A /* Service */,
+				39A8E07722F50B5F00D2036A /* Supporting Files */,
 			);
 			path = RegistrationPageMVP;
 			sourceTree = "<group>";
@@ -115,6 +121,8 @@
 			children = (
 				39A8E05622F4FA5200D2036A /* RegistrationPageMVPTests.swift */,
 				39A8E05822F4FA5200D2036A /* Info.plist */,
+				39A8E06F22F4FC7800D2036A /* RegistrationUnitTest.swift */,
+				39A8E07C22F50BC500D2036A /* MockUIViewController.swift */,
 			);
 			path = RegistrationPageMVPTests;
 			sourceTree = "<group>";
@@ -126,6 +134,58 @@
 				39A8E06322F4FA5200D2036A /* Info.plist */,
 			);
 			path = RegistrationPageMVPUITests;
+			sourceTree = "<group>";
+		};
+		39A8E07722F50B5F00D2036A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39A8E03E22F4FA4F00D2036A /* AppDelegate.swift */,
+				39A8E04D22F4FA5200D2036A /* Info.plist */,
+				39A8E04822F4FA5200D2036A /* Assets.xcassets */,
+				39A8E04522F4FA4F00D2036A /* RegistrationPageMVP.xcdatamodeld */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39A8E07822F50B7E00D2036A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39A8E04222F4FA4F00D2036A /* Main.storyboard */,
+				39A8E04A22F4FA5200D2036A /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		39A8E07922F50B8B00D2036A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				39A8E07A22F50B9600D2036A /* extensions */,
+				39A8E07122F5007700D2036A /* RegistrationPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		39A8E07A22F50B9600D2036A /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				39A8E07522F503C800D2036A /* ViewController+RegistrationDelegate.swift */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
+		39A8E07B22F50BA300D2036A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39A8E04022F4FA4F00D2036A /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		39A8E07E22F50C0C00D2036A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +319,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A8E07622F503C800D2036A /* ViewController+RegistrationDelegate.swift in Sources */,
 				39A8E04122F4FA4F00D2036A /* ViewController.swift in Sources */,
+				39A8E07222F5007700D2036A /* RegistrationPresenter.swift in Sources */,
 				39A8E03F22F4FA4F00D2036A /* AppDelegate.swift in Sources */,
 				39A8E04722F4FA4F00D2036A /* RegistrationPageMVP.xcdatamodeld in Sources */,
 			);
@@ -269,6 +331,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A8E07022F4FC7800D2036A /* RegistrationUnitTest.swift in Sources */,
+				39A8E07D22F50BC500D2036A /* MockUIViewController.swift in Sources */,
 				39A8E05722F4FA5200D2036A /* RegistrationPageMVPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
